@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teacherform.css">
+    
+    <title>Teacher Upload Form</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Teacher Notes</title>
+</head>
+<body>
+    <h1>Upload Teacher Notes</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="text" name="teacher_name" placeholder="Teacher Name" required>
+        <input type="file" name="note" required>
+        <button type="submit">Upload Note</button>
+    </form>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            fetch('/upload-note', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => alert(data))
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+    <!-- <script src="teacherBackend.js"></script> -->
+    <script src="teacherForm.js"></script>
+    <script src="server.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
