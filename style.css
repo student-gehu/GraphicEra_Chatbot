@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    width: 100%;
+    /* vh for the height of the page full according to the screen size */
+    height: 100vh;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.chat_container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+.chat_container{
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(to bottom, #652c90, #c02942); /* Gradient colors */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+    /* for makeing the chat container to be responsive we use overflow -y: auto; */
+    overflow:auto;      
+    position: relative;
+}
+
+.user-chat-box{
+    width: 60%;
+    position: relative;
+    left: 40%;
+}
+.ai-chat-box{
+    width: 60%;
+}
+.user-chat-area{
+    width: 90%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.325);
+    color: rgb(193, 214, 231);
+    border-radius: 40px 0px 40px 40px;
+    box-shadow: 2px 2px 10px black;
+}
+
+.teacher-chat-area{
+    width: 50%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.318);
+    color: rgb(212, 224, 235);
+    position: relative;
+    left: 30px;
+    border-radius: 0px 40px 40px 40px;
+    box-shadow: 2px 2px 10px black;
+}
+
+#userImage{
+    position: absolute;
+    right: 35px;
+    /* filter add shadow to the image */
+    filter:drop-shadow( 2px 2px 10px black)
+}
+
+#AiImage{
+    position: absolute;
+    left: 0;
+    filter:drop-shadow( 2px 2px 10px black)
+}
+
+.prompt-area{
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to top, #652c90, #c02942); /* Gradient colors */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.prompt-area input{
+    width: 50%;
+    height: 80px;
+    background-color: black;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    box-shadow: 2px 2px 10px black;
+}
+
+.prompt-area button{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.566);
+    border:none;
+    box-shadow: 2px 2px 10px black;
+    cursor: pointer;        /* make a hand cursor in the img image */
+    transition: 0.5;
+}
+
+.prompt-area button:hover{
+    background-color: rgba(0, 0, 0, 0.268);
+}
+
+.load{
+    filter:drop-shadow(4px 4px 10px black)
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  /* menu styling */
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  /* Menu Icon */
+  .menu-icon {
+    font-size: 34px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 10;
+  }
+  
+  /* Hidden Slide-Out Content */
+  .menu-content {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Start off-screen */
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(to right, #652c90, #c02942); /* Gradient colors */
+    color: #272525;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 9;
+    display: none; /* Initially hidden */
+  }
+  .menu-content::before {
+    content: " ";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 15%, transparent 15%);
+    background-size: 30px 30px; /* Adjust size of the pattern */
+    z-index: -1;
+    }
+  
+  .menu-content ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .menu-content ul li {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .menu-content ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .menu-content ul li a:hover {
+    background-color:linear-gradient(to right, #652c90, #c02942);
+    display: block;
+  }
+
+
